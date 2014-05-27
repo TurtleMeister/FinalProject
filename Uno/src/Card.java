@@ -17,10 +17,6 @@ public class Card
     private static final String[] ranks = {"0", "1", "2", "3", "4", "5","6", "7", "8", "9"};
 
 //card constructor
-    public Card() {
-        this(0, 0); //need to add more types of cards still, Different cards or just adding parts to this one?
-
-    }
 
     public Card(int color, int rank) {
         this.color = color;
@@ -32,46 +28,60 @@ public class Card
         return ranks[rank] + " of " + colors[color];
     }
 
-    /**
-     * Return true if the cards are equivalent.
-     */
+    public String rankToString(){
+        return ranks.toString();
+    }
 
-    // Problem with the compareTo method, this links into it so it doesn't work properly either.
-//    @Override
-//   public boolean equals(Object obj) {
-//        boolean b = false;
-//        if (obj instanceof Card) {
-//            Card that = (Card) obj;
-//            b = this.compareTo(that) == 0;
-//        }
-//        return b;
-//    }
+    public String colorToString(){
+        return colors.toString();
+    }
+
+    public int getRank(){
+    switch(rank){
+        case 0: return 0;
+        case 1: return 1;
+        case 2: return 2;
+        case 3: return 3;
+        case 4: return 4;
+        case 5: return 5;
+        case 6: return 6;
+        case 7: return 7;
+        case 8: return 8;
+        case 9: return 9;
+
+    }
+        return rank;
+    }
+
+
+    public int getColor(){
+    return color;
+    }
+
 
     public static void printCard(Card card) {
         System.out.println(card);
     }
 
-    /**
-     * Compares two cards: returns 1 if the first card is greater
-     * -1 if the seconds card is greater, and 0 if they are the equivalent.
-     */
 
 
-    //Problem with the compareTo method, for some reason the 2nd to last if-statement is unreachable.
-//    public int compareTo(Card that) {
-//        // first compare the colors
-//        if (this.color == that.color) {
-//            return 1;
-//        }
-//        else{
-//            return -1;
-//        }
-//
-//        // compare the ranks
-//        if (this.rank > that.rank) return 1;
-//        if (this.rank < that.rank) return -1;
-//        return 0;
+
+    //Tests to see if two cards are equal.
+    public Boolean compareTo(Card a, Card b) {
+        // first compare the colors
+        if (a.color != b.color) {
+            return false;
+        }
+        else{
+        // compare the ranks
+        if (a.rank == b.rank) {
+            return true;
+        }
+       else {
+            return false;
+
+
+        }
+        }
     }
-
-
 }
