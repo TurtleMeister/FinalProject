@@ -7,25 +7,23 @@
  */
 public class Card
 {
-    protected int color;
+    protected int suit;
     protected int rank;
-    protected int action;
-    protected int blankAction;
 
 
-    private static final String[] colors = { "Blue", "Red", "Green", "Yellow"};
-    private static final String[] ranks = {"0", "1", "2", "3", "4", "5","6", "7", "8", "9"};
+    private static final String[] suits = { "Spades", "Hearts", "Clubs", "Diamonds"};
+    private static final String[] ranks = {"Ace", "2", "3", "4", "5", "6","7", "8", "9", "10", "Jack", "Queen", "King"};
 
 //card constructor
 
-    public Card(int color, int rank) {
-        this.color = color;
+    public Card(int suit, int rank) {
+        this.suit = suit;
         this.rank = rank;
     }
 
     @Override
     public String toString() {
-        return ranks[rank] + " of " + colors[color];
+        return ranks[rank] + " of " + suits[suit];
     }
 
     public String rankToString(){
@@ -33,7 +31,7 @@ public class Card
     }
 
     public String colorToString(){
-        return colors.toString();
+        return suits.toString();
     }
 
     public int getRank(){
@@ -55,7 +53,7 @@ public class Card
 
 
     public int getColor(){
-    return color;
+    return suit;
     }
 
 
@@ -69,7 +67,7 @@ public class Card
     //Tests to see if two cards are equal.
     public Boolean compareTo(Card a, Card b) {
         // first compare the colors
-        if (a.color != b.color) {
+        if (a.suit != b.suit) {
             return false;
         }
         else{

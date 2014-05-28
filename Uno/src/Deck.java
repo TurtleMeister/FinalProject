@@ -23,12 +23,12 @@ public class Deck {
             System.out.println( cards.toString() );
         }
     }
-    Collection<String> d = deck;
-    Iterator<String> it = c.itreator();
-    while(it.hasNext()){
-        System.out.println(it.next());
-    }
-
+//    Collection<String> d = deck;
+//    Iterator<String> it = c.itreator();
+//    while(it.hasNext()){
+//        System.out.println(it.next());
+//    }
+//
 
 //    private Card[] cards;
 //    private Random generator;
@@ -55,7 +55,7 @@ public class Deck {
 
             for (int i = 0; i <= 3; i++) {
 
-                for (int o = 0; o <= 10; o++) {
+                for (int o = 0; o <= 12; o++) {
 
                     cards.add(new Card(i, o));
                 }
