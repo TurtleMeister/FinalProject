@@ -23,6 +23,11 @@ public class Deck {
             System.out.println( cards.toString() );
         }
     }
+    Collection<String> d = deck;
+    Iterator<String> it = c.itreator();
+    while(it.hasNext()){
+        System.out.println(it.next());
+    }
 
 
 //    private Card[] cards;
