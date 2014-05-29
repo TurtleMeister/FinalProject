@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+//Add a main class that invokes the various classes, calls Deck to make a deck, and Hand to show the hand
 
 /**
  * Write a description of class Hand here.
