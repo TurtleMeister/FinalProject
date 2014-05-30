@@ -15,6 +15,9 @@ public class Card
     private static final String[] ranks = {"Ace", "2", "3", "4", "5", "6","7", "8", "9", "10", "Jack", "Queen", "King"};
 
 //card constructor
+    public Card(){
+        this(0,0);
+    }
 
     public Card(int suit, int rank) {
         this.suit = suit;
@@ -52,7 +55,7 @@ public class Card
     }
 
 
-    public int getColor(){
+    public int getSuit(){
     return suit;
     }
 
@@ -66,7 +69,7 @@ public class Card
 
     //Tests to see if two cards are equal.
     public Boolean compareTo(Card a, Card b) {
-        // first compare the colors
+        // first compare the suits
         if (a.suit != b.suit) {
             return false;
         }

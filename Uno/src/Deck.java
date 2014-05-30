@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Deck {
     private static java.util.List deck;
     private ArrayList<Card> cards;
-
+//prints out the deck
     public static void main(String[] args)
     {
         Deck deck = new Deck();
@@ -23,30 +23,7 @@ public class Deck {
             System.out.println( cards.toString() );
         }
     }
-//    Collection<String> d = deck;
-//    Iterator<String> it = c.itreator();
-//    while(it.hasNext()){
-//        System.out.println(it.next());
-//    }
-//
 
-//    private Card[] cards;
-//    private Random generator;
-//    private int numberOfCards;
-//
-//        public Deck(){
-//        numberOfCards = 108;
-//            generator = new Random();
-//            int a = 0;
-//            cards = new Card[numberOfCards];
-//            for(int i = 0; i <= 3; i++){
-//                for(int o = 0; o <= 10; o++){
-//                    cards[a] = new Card(i,o);
-//                    a++;
-//                }
-//
-//            }
-//        }
 //makes an array list of cards and adds them to a deck
 
         Deck() {
@@ -63,7 +40,7 @@ public class Deck {
         }
 
 
-
+//adds a card
     public Card drawCard(){
         Random generator = new Random();
         int index = generator.nextInt(cards.size());
