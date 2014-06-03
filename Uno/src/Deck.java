@@ -9,50 +9,48 @@ import java.util.ArrayList;
 public class Deck {
     private static java.util.List deck;
     private ArrayList<Card> cards;
-//prints out the deck
-    public static void main(String[] args)
-    {
+    static Random generator = new Random();
+    //prints out the deck
+    public static void main(String[] args) {
         Deck deck = new Deck();
         Card cards;
 
-        System.out.println( deck.howManyCardsAreThereLeft() );
+        System.out.println(deck.deckSize());
 
-        while (deck.howManyCardsAreThereLeft()!= 0 )
-        {
+        while (deck.deckSize() != 0) {
             cards = deck.drawCard();
-            System.out.println( cards.toString() );
+            System.out.println(cards.toString());
         }
     }
 
 //makes an array list of cards and adds them to a deck
 
-        Deck() {
+    Deck() {
 
-            cards = new ArrayList<Card>();
+        cards = new ArrayList<Card>();
 
-            for (int i = 0; i <= 3; i++) {
+        for (int i = 0; i <= 12; i++) {
 
-                for (int o = 0; o <= 12; o++) {
+            for (int o = 0; o <= 3; o++) {
 
-                    cards.add(new Card(i, o));
-                }
+                cards.add(new Card(o, i));
             }
         }
+    }
 
 
-//adds a card
-    public Card drawCard(){
-        Random generator = new Random();
+    //adds a card
+    public Card drawCard() {
+
         int index = generator.nextInt(cards.size());
         return cards.remove(index);
 
     }
 
 
-    public int howManyCardsAreThereLeft() {
+    public int deckSize() {
         int remainder;
         remainder = cards.size();
         return remainder;
     }
-
 }

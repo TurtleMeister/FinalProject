@@ -24,6 +24,13 @@ public class Card
         this.rank = rank;
     }
 
+    public static String getRank(int i){
+        return ranks[i];
+
+    }
+    public static int getNumOfRanks(){
+        return ranks.length;
+    }
     @Override
     public String toString() {
         return ranks[rank] + " of " + suits[suit];
@@ -33,26 +40,11 @@ public class Card
         return ranks.toString();
     }
 
-    public String colorToString(){
+    public String suitToString(){
         return suits.toString();
     }
 
-    public int getRank(){
-    switch(rank){
-        case 0: return 0;
-        case 1: return 1;
-        case 2: return 2;
-        case 3: return 3;
-        case 4: return 4;
-        case 5: return 5;
-        case 6: return 6;
-        case 7: return 7;
-        case 8: return 8;
-        case 9: return 9;
 
-    }
-        return rank;
-    }
 
 
     public int getSuit(){
@@ -72,17 +64,17 @@ public class Card
         // first compare the suits
         if (a.suit != b.suit) {
             return false;
-        }
-        else{
-        // compare the ranks
-        if (a.rank == b.rank) {
-            return true;
-        }
-       else {
-            return false;
+        } else {
+            // compare the ranks
+            if (a.rank == b.rank) {
+                return true;
+            } else {
+                return false;
 
 
-        }
+            }
         }
     }
 }
+
+
