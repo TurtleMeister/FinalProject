@@ -1,9 +1,9 @@
 FinalProject
 ============
 
-# Java code for a simple card game
+# Java code for a simple game based on Go-Fish.
 
-## Game will be a simple game with usage of graphics to represent cards played.
+## To play simply run the Main class.
 
 
 
